@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>音と色のアンケート</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="title-wrapper">
+            <h1>音と色のアンケート</h1>
+        </div>
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScJBBxais5a1kNOas5Q2u8nmlWnDBippuXVswDzztgYNS7k_A/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="problem-container">
+                <div class="problem-number-wrapper">
+                    <h2>問題1</h2>
+                </div>
+                <div class="audio-wrapper">
+                    <audio controls loop>
+                        <source src="music/music.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <div class="problem-wrapper">
+                    <h3>上の音に合う色を選んでください</h3>
+                    <input type="color" name="entry.1393022544">
+                </div>
+            </div>
+            <div class="problem-container">
+                <div class="problem-number-wrapper">
+                    <h2>問題2</h2>
+                </div>
+                <div class="audio-wrapper">
+                    <audio controls loop>
+                        <source src="music/music.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <div class="problem-wrapper">
+                    <h3>上の音に合う色を選んでください</h3>
+                    <input type="color" name="entry.1065473334">
+                </div>
+            </div>
+            <div class="problem-container">
+                <div class="problem-number-wrapper">
+                    <h2>問題3</h2>
+                </div>
+                <div class="audio-wrapper">
+                    <audio controls loop>
+                        <source src="music/music.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <div class="problem-wrapper">
+                    <h3>上の音に合う色を選んでください</h3>
+                    <input type="color" name="entry.1147716347">
+                </div>
+            </div>
+            <div class="problem-container">
+                <div class="problem-number-wrapper">
+                    <h2>問題4</h2>
+                </div>
+                <div class="audio-wrapper">
+                    <audio controls loop>
+                        <source src="music/music.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <div class="problem-wrapper">
+                    <h3>上の音に合う色を選んでください</h3>
+                    <input type="color" name="entry.1476773096">
+                </div>
+            </div>
+            <div class="problem-container">
+                <div class="problem-number-wrapper">
+                    <h2>問題5</h2>
+                </div>
+                <div class="audio-wrapper">
+                    <audio controls loop>
+                        <source src="music/music.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <div class="problem-wrapper">
+                    <h3>上の音に合う色を選んでください</h3>
+                    <input type="color" name="entry.479086835">
+                </div>
+            </div>
+            <div class="submit-bt-wrapper">
+                <button class="submit-bt" type="submit">送信</button>
+            </div>
+        </form>
+        <script>
+            let submitted = false;
+
+            const page_transition = function() {
+                if (submitted) {
+                    window.location = './thanks.html';
+                }
+            }
+        </script>
+        <iframe name="hidden_iframe" style="display:none;" onload="page_transition()"></iframe>
+</body>
+
+</html>

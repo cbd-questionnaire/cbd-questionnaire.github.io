@@ -1,0 +1,36 @@
+.title-wrapper {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.problem-wrapper {
+    text-align: center;
+}
+
+.problem-number-wrapper {
+    padding-left: 10%;
+}
+
+.audio-wrapper {
+    text-align: center;
+}
+
+.problem-container {
+    margin-bottom: 50px;
+}
+
+.submit-bt-wrapper {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.submit-bt {
+    width: 150px;
+    height: 35px;
+    background-color: rgb(83, 118, 206);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
