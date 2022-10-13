@@ -14,9 +14,6 @@
         <div class="title-wrapper">
             <h1>Sound and Color Questionnaire</h1>
         </div>
-        <div>
-            <h1 id="ip">a</h1>
-        </div>
         <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScJBBxais5a1kNOas5Q2u8nmlWnDBippuXVswDzztgYNS7k_A/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
             <div class="problem-container">
                 <div class="problem-number-wrapper">
@@ -93,12 +90,6 @@
             </div>
         </form>
         <script>
-            var elem = document.getElementById("ip");
-            fetch('https://ipinfo.io/json?token=f1e763d539275e')
-                .then(res => res.json())
-                .then(json => elem.innerText = json.ip)
-            let submitted = false;
-
             const page_transition = function() {
                 if (submitted) {
                     window.location = './thanks.html';
