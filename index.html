@@ -13,76 +13,82 @@
     <div class="main">
         <div class="title-wrapper">
             <h1>Sound and Color Questionnaire</h1>
+            <h3>Choose the color from the right that you think matches the sound on the left .</h3>
         </div>
         <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScJBBxais5a1kNOas5Q2u8nmlWnDBippuXVswDzztgYNS7k_A/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
             <div class="problem-container">
                 <div class="problem-number-wrapper">
                     <h2>1</h2>
                 </div>
-                <div class="audio-wrapper">
-                    <audio controls loop>
-                        <source src="music/music.mp3" type="audio/mp3">
-                    </audio>
-                </div>
-                <div class="problem-wrapper">
-                    <h3>Choose the color you think fits the sound above.</h3>
-                    <input type="color" name="entry.1393022544">
+                <div class="input-flex-wrapper">
+                    <div class="audio-wrapper">
+                        <audio controls loop>
+                            <source src="music/music.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                    <div class="problem-wrapper">
+                        <input type="color" name="entry.1393022544">
+                    </div>
                 </div>
             </div>
             <div class="problem-container">
                 <div class="problem-number-wrapper">
                     <h2>2</h2>
                 </div>
-                <div class="audio-wrapper">
-                    <audio controls loop>
-                        <source src="music/music.mp3" type="audio/mp3">
-                    </audio>
-                </div>
-                <div class="problem-wrapper">
-                    <h3>Choose the color you think fits the sound above.</h3>
-                    <input type="color" name="entry.1065473334">
+                <div class="input-flex-wrapper">
+                    <div class="audio-wrapper">
+                        <audio controls loop>
+                            <source src="music/music.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                    <div class="problem-wrapper">
+                        <input type="color" name="entry.1065473334">
+                    </div>
                 </div>
             </div>
             <div class="problem-container">
                 <div class="problem-number-wrapper">
                     <h2>3</h2>
                 </div>
-                <div class="audio-wrapper">
-                    <audio controls loop>
-                        <source src="music/music.mp3" type="audio/mp3">
-                    </audio>
-                </div>
-                <div class="problem-wrapper">
-                    <h3>Choose the color you think fits the sound above.</h3>
-                    <input type="color" name="entry.1147716347">
+                <div class="input-flex-wrapper">
+                    <div class="audio-wrapper">
+                        <audio controls loop>
+                            <source src="music/music.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                    <div class="problem-wrapper">
+                        <input type="color" name="entry.1147716347">
+                    </div>
                 </div>
             </div>
             <div class="problem-container">
                 <div class="problem-number-wrapper">
                     <h2>4</h2>
                 </div>
-                <div class="audio-wrapper">
-                    <audio controls loop>
-                        <source src="music/music.mp3" type="audio/mp3">
-                    </audio>
-                </div>
-                <div class="problem-wrapper">
-                    <h3>Choose the color you think fits the sound above.</h3>
-                    <input type="color" name="entry.1476773096">
+                <div class="input-flex-wrapper">
+                    <div class="audio-wrapper">
+                        <audio controls loop>
+                            <source src="music/music.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                    <div class="problem-wrapper">
+                        <input type="color" name="entry.1476773096">
+                    </div>
                 </div>
             </div>
             <div class="problem-container">
                 <div class="problem-number-wrapper">
                     <h2>5</h2>
                 </div>
-                <div class="audio-wrapper">
-                    <audio controls loop>
-                        <source src="music/music.mp3" type="audio/mp3">
-                    </audio>
-                </div>
-                <div class="problem-wrapper">
-                    <h3>Choose the color you think fits the sound above.</h3>
-                    <input type="color" name="entry.479086835">
+                <div class="input-flex-wrapper">
+                    <div class="audio-wrapper">
+                        <audio controls loop>
+                            <source src="music/music.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                    <div class="problem-wrapper">
+                        <input type="color" name="entry.479086835">
+                    </div>
                 </div>
             </div>
             <div class="submit-bt-wrapper">
@@ -90,6 +96,8 @@
             </div>
         </form>
         <script>
+            let submitted = false;
+
             const page_transition = function() {
                 if (submitted) {
                     window.location = './thanks.html';
