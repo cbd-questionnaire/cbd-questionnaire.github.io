@@ -211,7 +211,6 @@
             let isPlay8 = false
             let isPlay9 = false
             let isPlay10 = false
-            let playingSound = 0
 
             function playSound() {
                 if (isPlay1 === false) {
@@ -230,7 +229,6 @@
                     img2.src = 'assets/pause.png';
                     audio2.play()
                     isPlay2 = true
-                    playingSound = 2
                 } else {
                     img2.src = 'assets/start.png';
                     audio2.pause()
@@ -243,8 +241,6 @@
                     img3.src = 'assets/pause.png';
                     audio3.play()
                     isPlay3 = true
-                    playingSound = 3
-                } else {
                     img3.src = 'assets/start.png';
                     audio3.pause()
                     isPlay3 = false
