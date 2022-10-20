@@ -13,21 +13,22 @@
     <div class="main">
         <div class="title-wrapper">
             <h1>Sound and Color Questionnaire</h1>
-            <h3>Choose the color from the right that you think matches the sound on the left .</h3>
+            <h3>Choose the color from the right that you feel matches the sound on the left .</h3>
         </div>
         <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScJBBxais5a1kNOas5Q2u8nmlWnDBippuXVswDzztgYNS7k_A/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-            <div class="problem-container">
+            <div class="problem-container" id="change1">
                 <div class="problem-number-wrapper">
                     <h2>1</h2>
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
-                        <audio controls loop>
+                        <audio id="audio1" controls loop>
                             <source src="music/1244.508Hz.wav">
                         </audio>
                     </div>
+                    <img id="img1" src="assets/start.png" alt="" width="35px" height="35px" onclick="playSound()">
                     <div class="problem-wrapper">
-                        <input type="color" name="entry.1393022544">
+                        <input type="color" id="input1" name="entry.1393022544">
                     </div>
                 </div>
             </div>
@@ -37,10 +38,11 @@
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
-                        <audio controls loop>
+                        <audio id="audio2" controls loop>
                             <source src="music/415.305Hz.wav">
                         </audio>
                     </div>
+                    <img id="img2" src="assets/start.png" alt="" width="35px" height="35px" onclick="playSound2()">
                     <div class="problem-wrapper">
                         <input type="color" name="entry.1065473334">
                     </div>
@@ -52,10 +54,11 @@
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
-                        <audio controls loop>
+                        <audio id="audio3" controls loop>
                             <source src="music/1661.219Hz.wav">
                         </audio>
                     </div>
+                    <img id="img3" src="assets/start.png" alt="" width="35px" height="35px" onclick="playSound3()">
                     <div class="problem-wrapper">
                         <input type="color" name="entry.1147716347">
                     </div>
@@ -67,10 +70,11 @@
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
-                        <audio controls loop>
+                        <audio id="audio4" controls loop>
                             <source src="music/2093.005Hz.wav">
                         </audio>
                     </div>
+                    <img id="img4" src="assets/start.png" alt="" width="35px" height="35px" onclick="playSound4()">
                     <div class="problem-wrapper">
                         <input type="color" name="entry.1476773096">
                     </div>
@@ -82,10 +86,11 @@
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
-                        <audio controls loop>
+                        <audio id="audio5" controls loop>
                             <source src="music/220.0Hz.wav">
                         </audio>
                     </div>
+                    <img id="img5" src="assets/start.png" alt="" width="35px" height="35px" onclick="playSound5()">
                     <div class="problem-wrapper">
                         <input type="color" name="entry.479086835">
                     </div>
@@ -97,10 +102,11 @@
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
-                        <audio controls loop>
+                        <audio id="audio6" controls loop>
                             <source src="music/830.609Hz.wav">
                         </audio>
                     </div>
+                    <img id="img6" src="assets/start.png" alt="" width="35px" height="35px" onclick="playSound6()">
                     <div class="problem-wrapper">
                         <input type="color" name="entry.303734555">
                     </div>
@@ -112,10 +118,11 @@
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
-                        <audio controls loop>
+                        <audio id="audio7" controls loop>
                             <source src="music/1864.655Hz.wav">
                         </audio>
                     </div>
+                    <img id="img7" src="assets/start.png" alt="" width="35px" height="35px" onclick="playSound7()">
                     <div class="problem-wrapper">
                         <input type="color" name="entry.2054309752">
                     </div>
@@ -127,10 +134,11 @@
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
-                        <audio controls loop>
+                        <audio id="audio8" controls loop>
                             <source src="music/987.767Hz.wav">
                         </audio>
                     </div>
+                    <img id="img8" src="assets/start.png" alt="" width="35px" height="35px" onclick="playSound8()">
                     <div class="problem-wrapper">
                         <input type="color" name="entry.1644651503">
                     </div>
@@ -142,10 +150,11 @@
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
-                        <audio controls loop>
+                        <audio id="audio9" controls loop>
                             <source src="music/1479.978Hz.wav">
                         </audio>
                     </div>
+                    <img id="img9" src="assets/start.png" alt="" width="35px" height="35px" onclick="playSound9()">
                     <div class="problem-wrapper">
                         <input type="color" name="entry.506002719">
                     </div>
@@ -157,10 +166,11 @@
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
-                        <audio controls loop>
+                        <audio id="audio10" controls loop>
                             <source src="music/659.255Hz.wav">
                         </audio>
                     </div>
+                    <img id="img10" src="assets/start.png" alt="" width="35px" height="35px" onclick="playSound10()">
                     <div class="problem-wrapper">
                         <input type="color" name="entry.719595435">
                     </div>
@@ -171,6 +181,161 @@
             </div>
         </form>
         <script>
+            const audio1 = document.getElementById('audio1');
+            const audio2 = document.getElementById('audio2');
+            const audio3 = document.getElementById('audio3');
+            const audio4 = document.getElementById('audio4');
+            const audio5 = document.getElementById('audio5');
+            const audio6 = document.getElementById('audio6');
+            const audio7 = document.getElementById('audio7');
+            const audio8 = document.getElementById('audio8');
+            const audio9 = document.getElementById('audio9');
+            const audio10 = document.getElementById('audio10');
+            const img1 = document.getElementById('img1');
+            const img2 = document.getElementById('img2');
+            const img3 = document.getElementById('img3');
+            const img4 = document.getElementById('img4');
+            const img5 = document.getElementById('img5');
+            const img6 = document.getElementById('img6');
+            const img7 = document.getElementById('img7');
+            const img8 = document.getElementById('img8');
+            const img9 = document.getElementById('img9');
+            const img10 = document.getElementById('img10');
+            let isPlay1 = false
+            let isPlay2 = false
+            let isPlay3 = false
+            let isPlay4 = false
+            let isPlay5 = false
+            let isPlay6 = false
+            let isPlay7 = false
+            let isPlay8 = false
+            let isPlay9 = false
+            let isPlay10 = false
+            let playingSound = 0
+
+            function playSound() {
+                if (isPlay1 === false) {
+                    img1.src = 'assets/pause.png';
+                    audio1.play()
+                    isPlay1 = true
+                } else {
+                    img1.src = 'assets/start.png';
+                    audio1.pause()
+                    isPlay1 = false
+                }
+            }
+
+            function playSound2() {
+                if (isPlay2 === false) {
+                    img2.src = 'assets/pause.png';
+                    audio2.play()
+                    isPlay2 = true
+                    playingSound = 2
+                } else {
+                    img2.src = 'assets/start.png';
+                    audio2.pause()
+                    isPlay2 = false
+                }
+            }
+
+            function playSound3() {
+                if (isPlay3 === false) {
+                    img3.src = 'assets/pause.png';
+                    audio3.play()
+                    isPlay3 = true
+                    playingSound = 3
+                } else {
+                    img3.src = 'assets/start.png';
+                    audio3.pause()
+                    isPlay3 = false
+                }
+            }
+
+            function playSound4() {
+                if (isPlay4 === false) {
+                    img4.src = 'assets/pause.png';
+                    audio4.play()
+                    isPlay4 = true
+                } else {
+                    img4.src = 'assets/start.png';
+                    audio4.pause()
+                    isPlay4 = false
+                }
+            }
+
+            function playSound5() {
+                if (isPlay5 === false) {
+                    img5.src = 'assets/pause.png';
+                    audio5.play()
+                    isPlay5 = true
+                } else {
+                    img5.src = 'assets/start.png';
+                    audio5.pause()
+                    isPlay5 = false
+                }
+            }
+
+            function playSound6() {
+                if (isPlay6 === false) {
+                    img6.src = 'assets/pause.png';
+                    audio6.play()
+                    isPlay6 = true
+                } else {
+                    img6.src = 'assets/start.png';
+                    audio6.pause()
+                    isPlay6 = false
+                }
+            }
+
+            function playSound7() {
+                if (isPlay7 === false) {
+                    img7.src = 'assets/pause.png';
+                    audio7.play()
+                    isPlay2 = true
+                } else {
+                    img7.src = 'assets/start.png';
+                    audio7.pause()
+                    isPlay7 = false
+                }
+            }
+
+            function playSound8() {
+                if (isPlay8 === false) {
+                    img8.src = 'assets/pause.png';
+                    audio8.play()
+                    isPlay8 = true
+                } else {
+                    img8.src = 'assets/start.png';
+                    audio8.pause()
+                    isPlay8 = false
+                }
+            }
+
+            function playSound9() {
+                if (isPlay9 === false) {
+                    img9.src = 'assets/pause.png';
+                    audio9.play()
+                    isPlay9 = true
+                } else {
+                    img9.src = 'assets/start.png';
+                    audio9.pause()
+                    isPlay9 = false
+                }
+            }
+
+            function playSound10() {
+                if (isPlay10 === false) {
+                    img10.src = 'assets/pause.png';
+                    audio10.play()
+                    isPlay10 = true
+                } else {
+                    img10.src = 'assets/start.png';
+                    audio10.pause()
+                    isPlay10 = false
+                }
+            }
+
+
             let submitted = false;
 
             const page_transition = function() {
@@ -183,3 +348,4 @@
 </body>
 
 </html>
+    
