@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .title-wrapper {
     text-align: center;
-    margin: 50px 0;
+    padding: 50px 30px 0 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title-wrapper h1 {
+    margin-bottom: 20px;
 }
 
 .problem-wrapper {
@@ -9,6 +20,7 @@
 
 .problem-number-wrapper {
     padding-left: 10%;
+    margin-bottom: 30px;
 }
 
 .audio-wrapper {
@@ -16,7 +28,7 @@
 }
 
 .problem-container {
-    margin-bottom: 50px;
+    margin: 45px;
 }
 
 .submit-bt-wrapper {
@@ -27,28 +39,52 @@
 .submit-bt {
     width: 150px;
     height: 35px;
-    background-color: rgb(83, 118, 206);
+    background: linear-gradient(45deg, #cf94dd, #7cd9ce);
     outline: none;
     border: none;
     border-radius: 10px;
     color: white;
     font-weight: bold;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 }
 
 .input-flex-wrapper {
-    width: 400px;
+    width: 200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+img {
+    cursor: pointer;
+}
+
+.audio-wrapper {
+    display: none;
+}
+
 @media screen and (max-width:480px) {
     .input-flex-wrapper {
-        width: 320px;
+        width: 150px;
     }
-    audio {
-        width: 250px;
+}
+
+body {
+    background: linear-gradient(90deg, #79a8d7, #d483b1);
+    background-size: 200% 200%;
+    animation: bggradient 9s ease infinite;
+}
+
+@keyframes bggradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
