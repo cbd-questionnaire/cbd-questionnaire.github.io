@@ -15,10 +15,38 @@
             <h1>Sound and Color Questionnaire</h1>
             <h3>Choose the color from the right that you feel matches the sound on the left .</h3>
         </div>
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScJBBxais5a1kNOas5Q2u8nmlWnDBippuXVswDzztgYNS7k_A/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+        <form
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScJBBxais5a1kNOas5Q2u8nmlWnDBippuXVswDzztgYNS7k_A/formResponse"
+            method="post" target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="problem-container">
+                <h2>1</h2>
+                <h3>What is your gender?</h3>
+                <div class="container">
+
+                    <label for="radio-1" class="radio-label">
+                        <input type="radio" id="radio-1" class="radio" name="category_id">
+                        <span class="label-check check">
+                            male
+                        </span>
+                    </label>
+                    <label for="radio-2" class="radio-label">
+                        <input type="radio" id="radio-2" class="radio" name="category_id">
+                        <span class="label-check check">
+                            female
+                        </span>
+                    </label>
+                    <label for="radio-3" class="radio-label">
+                        <input type="radio" id="radio-3" class="radio" name="category_id">
+                        <span class="label-check check">
+                            other
+                        </span>
+                    </label>
+                </div>
+            </div>
             <div class="problem-container" id="change1">
                 <div class="problem-number-wrapper">
-                    <h2>1</h2>
+                    <h2>2</h2>
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
@@ -34,7 +62,7 @@
             </div>
             <div class="problem-container">
                 <div class="problem-number-wrapper">
-                    <h2>2</h2>
+                    <h2>3</h2>
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
@@ -50,7 +78,7 @@
             </div>
             <div class="problem-container">
                 <div class="problem-number-wrapper">
-                    <h2>3</h2>
+                    <h2>4</h2>
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
@@ -66,7 +94,7 @@
             </div>
             <div class="problem-container">
                 <div class="problem-number-wrapper">
-                    <h2>4</h2>
+                    <h2>5</h2>
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
@@ -82,7 +110,7 @@
             </div>
             <div class="problem-container">
                 <div class="problem-number-wrapper">
-                    <h2>5</h2>
+                    <h2>6</h2>
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
@@ -98,7 +126,7 @@
             </div>
             <div class="problem-container">
                 <div class="problem-number-wrapper">
-                    <h2>6</h2>
+                    <h2>7</h2>
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
@@ -114,7 +142,7 @@
             </div>
             <div class="problem-container">
                 <div class="problem-number-wrapper">
-                    <h2>7</h2>
+                    <h2>8</h2>
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
@@ -130,7 +158,7 @@
             </div>
             <div class="problem-container">
                 <div class="problem-number-wrapper">
-                    <h2>8</h2>
+                    <h2>9</h2>
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
@@ -146,7 +174,7 @@
             </div>
             <div class="problem-container">
                 <div class="problem-number-wrapper">
-                    <h2>9</h2>
+                    <h2>10</h2>
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
@@ -162,7 +190,7 @@
             </div>
             <div class="problem-container">
                 <div class="problem-number-wrapper">
-                    <h2>10</h2>
+                    <h2>11</h2>
                 </div>
                 <div class="input-flex-wrapper">
                     <div class="audio-wrapper">
@@ -336,7 +364,7 @@
 
             let submitted = false;
 
-            const page_transition = function() {
+            const page_transition = function () {
                 if (submitted) {
                     window.location = './thanks.html';
                 }
@@ -346,4 +374,3 @@
 </body>
 
 </html>
-    
