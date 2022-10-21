@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +20,6 @@
 }
 
 .problem-number-wrapper {
-    padding-left: 10%;
     margin-bottom: 30px;
 }
 
@@ -28,6 +28,7 @@
 }
 
 .problem-container {
+    padding-left: 10%;
     margin: 45px;
 }
 
@@ -69,6 +70,14 @@ img {
     .input-flex-wrapper {
         width: 150px;
     }
+
+    .problem-container {
+        padding-left: 0;
+    }
+
+    .problem-container h3 {
+        text-align: center;
+    }
 }
 
 body {
@@ -81,10 +90,74 @@ body {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
+}
+
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.radio-label input[type=radio].radio {
+    display: none;
+}
+
+.radio-label {
+    position: relative;
+    margin: 10px;
+}
+
+.radio-label .label-check {
+    position: relative;
+    display: block;
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+.radio-label .label-check:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+}
+
+.radio-label input[type=radio].radio:checked+.label-check:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+    display: block;
+    margin: auto;
+}
+
+.radio-label .label-check.check:before {
+    border: 1px solid #ddd;
+}
+
+.radio-label input[type=radio].radio:checked+.label-check.check:after {
+    top: -10px;
+    width: 12px;
+    height: 24px;
+    border-bottom: 5px solid #4abdac;
+    border-right: 4px solid #4abdac;
+    transform: rotate(45deg);
 }
